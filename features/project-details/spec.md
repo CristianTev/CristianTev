@@ -3,7 +3,6 @@
 implement `index.html` 
 ## Designs \
 
-![target layout](/assets/Images/Screenshot%202026-04-22%20101231.png) 
 ![target layout](/assets/Images/Untitled.png) 
 
 ## Work
