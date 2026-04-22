@@ -1,4 +1,4 @@
- ## Hi, I'm YOUR_ACTUAL_NAME 
+ ## Hi, I'm Cristian
 
 💻 GAMING🎮 / CODER 🗿
 
@@ -10,4 +10,4 @@
 📎 C#
 
 ## My favorite Tools 
-🛠 Vs Code Studio 
+🛠 VSCode • Visual Studio • GitHub
