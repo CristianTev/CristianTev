@@ -14,4 +14,4 @@ implement `index.html`
 - Right section has project cards and slides down for the other projects (Project #1, Project #2, etc)
 - Hovering over a project card highlights it
 - Clicking a project card navigates to the project details page
-  
+- Done = all sections visible and links work
