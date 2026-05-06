@@ -1,6 +1,6 @@
  ## Hi, I'm Cristian
 
-- 💻 GAMING🎮 / CODER 🗿
+- 💻 GAMER 🎮 / CODER 🗿
 - 🪐Currently learning: Web Design
 - 📧 Reach me: [cristianperezramos190@gmail.com](mailto:cristianperezramos190@gmail.com)
  
@@ -8,4 +8,4 @@
 📎 C#, HTML, CSS, JS
 
 ## My favorite Tools 
-🛠 Vs Code, VS Studio, Github.
+🛠 Vs Code, VS Studio, Github
