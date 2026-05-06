@@ -1,0 +1,145 @@
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 475px;
+    height: 50px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+nav a{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 8px 23px;
+    z-index: 1;
+}
+
+nav span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, #194b4f, #33fffc);
+    border-radius: 10px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+nav:hover span{
+    opacity: 1;
+}
+
+nav a:nth-child(1):hover ~ span{
+    left: 85px;
+}
+nav a:nth-child(2):hover ~ span{
+    left: 183px;
+}
+nav a:nth-child(3):hover ~ span{
+    left: 285px;
+}
+
+.profile{
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 8rem 2rem 2rem 2rem;
+}
+
+.profile-text{
+    max-width: 50%;
+
+}
+
+.profile-text h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff6f61;
+}
+
+.profile-text p {
+font-size: 1rem;
+line-height: 1.6;
+margin-bottom: 2rem;
+color: white;
+}
+
+button{
+    background: #ff6f61;
+    color: white;
+    padding:0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease
+}
+
+.profile-picture{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255 , 111 , 97 , 0.0), 0 0 0 40px
+    rgba(51, 255, 252, 1);
+    animation: glow-border 2s infinite alternate;
+    margin-right: 50px;
+}
+
+.profile-picture{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@keyframes glow{
+0%{
+        text-shadow: 0 0 5px #33fffc, 0 0 10px #33fffc, 0 0 20px #33fffc;
+    }
+    100%{
+        text-shadow: 0 0 10px #33fffc, 0 0 20px #33fffc , 0 0 30px #33fffc , 0 0 40px #33fffc;
+    }
+}
+    
+@keyframes glow-border{
+    0%{
+        box-shadow: 0 0 10px rgba(51, 255, 252, 1), 0 0 20px rgba(51, 255, 252, 1);
+    }
+    100%{
+        box-shadow: 0 0 20px rgba(51, 255, 252, 1), 0 0 40px rgba(51, 255, 252, 1);
+    }
+}
+
+section.profile {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
