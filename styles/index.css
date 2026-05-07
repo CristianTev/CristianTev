@@ -20,10 +20,10 @@ nav{
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 475px;
-    height: 50px;
+    width: 475px; /*should be %*/
+    height: 50px; /*should be %*/
     background: rgba(0,0,0,0.4);
-    border-radius: 10px;
+    border-radius: 10px; /*should be %*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ nav a{
     font-weight: 500;
     color: white;
     text-decoration: none;
-    padding: 8px 23px;
+    padding: 8px 23px; /*wrong unit , should be rem*/
     z-index: 1;
 }
 
@@ -143,3 +143,16 @@ section.profile {
     z-index: 1;
     width: 100%;
 }
+
+
+/*Mobile is NOT the default , it doesnt looks good for phone but does for Ipads and desktops*/
+/*Global .css doesn't contain nothing'
+
+none fonts implemented yet.
+
+
+I need to review my unities more .
+
+
+*/
+
