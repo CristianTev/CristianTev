@@ -21,6 +21,7 @@ nav{
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
+    max-width: 22rem;
     height: auto; 
     padding: 0.5rem 0;
     background: rgba(0,0,0,0.4);
@@ -43,15 +44,7 @@ nav a{
 }
 
 nav span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5.9rem;
-    height: 100%;
-    background: linear-gradient(45deg, #194b4f, #33fffc);
-    border-radius: 0.625rem;
-    transition: 0.5s;
-    opacity: 0;
+    display: none;
 }
 
 nav:hover span{
@@ -59,13 +52,13 @@ nav:hover span{
 }
 
 nav a:nth-child(1):hover ~ span{
-    left: 1.8rem;
+    left: 85px;
 }
 nav a:nth-child(2):hover ~ span{
-    left: 6.2rem;
+    left: 183px;
 }
 nav a:nth-child(3):hover ~ span{
-    left: 10.5rem;
+    left: 285px;
 }
 
 .profile{
@@ -90,10 +83,16 @@ padding: 6rem 1.5rem 2rem;
 }
 
 .profile-text p {
-font-size: 1rem;
-line-height: 1.6;
-margin-bottom: 2rem;
-color: white;
+    max-width: 100%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.625rem;
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: white;
 }
 
 button{
@@ -158,10 +157,25 @@ section.profile{
 }
 
 @media (min-width: 1024px) {
+
+    nav span{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5.9rem;
+        height: 100%;
+        background: linear-gradient(45deg, #194b4f, #33fffc);
+        border-radius: 0.625rem;
+        transition: 0.5s;
+        opacity: 0;
+    }
  
     nav{
+        max-width: none;
+        width:30rem;
         height: 3.125rem;
-        padding: 0;
+        padding:0;
     }
 
     nav a {
