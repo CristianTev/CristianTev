@@ -17,13 +17,14 @@ body{
 
 nav{
     position: fixed;
-    top: 20px;
+    top: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 475px; /*should be %*/
-    height: 50px; /*should be %*/
+    width: 90%;
+    height: auto; 
+    padding: 0.5rem 0;
     background: rgba(0,0,0,0.4);
-    border-radius: 10px; /*should be %*/
+    border-radius: 0.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +38,7 @@ nav a{
     font-weight: 500;
     color: white;
     text-decoration: none;
-    padding: 8px 23px; /*wrong unit , should be rem*/
+    padding: 0.5rem 0.7rem ; 
     z-index: 1;
 }
 
@@ -45,10 +46,10 @@ nav span{
     position: absolute;
     top: 0;
     left: 0;
-    width: 95px;
+    width: 5.9rem;
     height: 100%;
     background: linear-gradient(45deg, #194b4f, #33fffc);
-    border-radius: 10px;
+    border-radius: 0.625rem;
     transition: 0.5s;
     opacity: 0;
 }
@@ -58,30 +59,32 @@ nav:hover span{
 }
 
 nav a:nth-child(1):hover ~ span{
-    left: 85px;
+    left: 1.8rem;
 }
 nav a:nth-child(2):hover ~ span{
-    left: 183px;
+    left: 6.2rem;
 }
 nav a:nth-child(3):hover ~ span{
-    left: 285px;
+    left: 10.5rem;
 }
 
 .profile{
 height: 100%;
 display: flex;
-justify-content: space-between;
+flex-direction: column;
+justify-content: center;
 align-items: center;
-padding: 8rem 2rem 2rem 2rem;
+text-align: center;
+padding: 6rem 1.5rem 2rem;
 }
 
 .profile-text{
-    max-width: 50%;
+    max-width: 100%;
 
 }
 
 .profile-text h1{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #ff6f61;
 }
@@ -98,28 +101,33 @@ button{
     color: white;
     padding:0.7rem 1.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     cursor: pointer;
     transition: transform 0.3s ease
 }
 
 .profile-picture{
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(255 , 111 , 97 , 0.0), 0 0 0 40px
-    rgba(51, 255, 252, 1);
     animation: glow-border 2s infinite alternate;
-    margin-right: 50px;
+    margin: 2rem auto 0;
 }
 
-.profile-picture{
+.profile-picture img{
     object-fit: cover;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
+section.profile{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
 @keyframes glow{
 0%{
         text-shadow: 0 0 5px #33fffc, 0 0 10px #33fffc, 0 0 20px #33fffc;
@@ -138,21 +146,53 @@ button{
     }
 }
 
-section.profile {
-    position: relative;
-    z-index: 1;
-    width: 100%;
+@media (min-width: 768px){
+    .profile-text h1{
+        font-size: 2rem;
+    }
+
+    .profile-picture{
+        width:15rem;
+        height: 15rem;
+    }
 }
 
+@media (min-width: 1024px) {
+ 
+    nav{
+        height: 3.125rem;
+        padding: 0;
+    }
 
-/*Mobile is NOT the default , it doesnt looks good for phone but does for Ipads and desktops*/
-/*Global .css doesn't contain nothing'
+    nav a {
+        padding: 0.5rem 1.4rem;
+        font-size: 1rem;
+    }
 
-none fonts implemented yet.
+    nav a:nth-child(1):hover ~ span { left: 5.3rem; }
+    nav a:nth-child(2):hover ~ span { left: 11.4rem; }
+    nav a:nth-child(3):hover ~ span { left: 17.8rem; }
 
+    .profile{
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 8rem 2rem 2rem;
+    }
 
-I need to review my unities more .
+    .profile-text{
+        max-width: 50%;
+    }
 
+    .profile-text h1{
+        font-size: 2.5rem;
+    }
 
-*/
+    .profile-picture{
+        width: 18.75rem;
+        height: 18.75rem;
+        margin: 0 3.125rem 0 0;
+    }
+}
+
 
