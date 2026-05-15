@@ -5,46 +5,51 @@
     <link rel="stylesheet" href="./styles/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
+    <title>Cristian Perez Ramos| Web developer | Portfolio</title>
 </head>
 <body>
-
-
-     <video autoplay loop muted class = "back-video"> 
+     <video autoplay loop muted class="back-video"> 
         <source src="./assets/specs/Homepage 2026-05-05 at 16.02.56.mp4">
      </video>
-
      <nav>
-        <a href="">Home</a>
-        <a href="">About me</a>
-        <a href="">Projects</a>
-        <span></span>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About me</a></li>
+            <li><a href="">Projects</a></li>
+        </ul>
      </nav>
-
-
-     <section class="profile">
-        <div class="profile-text">
-            <h1>
-                Hello, I'am Cristian Perez Ramos
-            </h1>
-            <p>
-                A passionate web developer that creates awesome,
-                creative and functional wbsites. I have experience 
-                in C#, HTML, CSS, JS and always do my best working in 
-                teams and new projects.
-            </p>
-            <button>
-                View my work
-            </button>
+     <section class="main-layout">
+        <div class="left-section">
+            <div class="profile-picture">
+                <img src="./assets/specs/WhatsApp Image 2026-05-05 at 16.26.37.jpeg" alt="Profile-picture">
+            </div>
+            <h1>Hello, I'am Cristian Perez Ramos</h1>
+            <p>A passionate web developer that creates awesome, creative and functional websites. I have experience in C#, HTML, CSS, JS and always do my best working in teams and new projects.</p>
+            <h2>Hobbies</h2>
+            <p>I enjoy playing video games, programming, listening to music, and watching series and movies.</p>
+            <h2>Tech Stack</h2>
+            <p>Languages: C#, HTML, CSS, JavaScript.</p>
+            <p>Tools: Visual Studio Code, Visual Studio, GitHub.</p>
         </div>
-        <div class="profile-picture">
-            <img src="./assets/specs/WhatsApp Image 2026-05-05 at 16.26.37.jpeg" alt="Profile-picture">
+        <div class="right-section">
+            <div class="project-cards">
+                <a href="./features/project-details/Fish.html" class="card">
+                    <h3>Fish Game</h3>
+                    <img src="./assets/Images/Fish.png" alt="Fish Game">
+                    <p>A terminal-based fish game built in C#.</p>
+                </a>
+                <a href="./features/project-details/Sudoku.html" class="card">
+                    <img src="./assets/Images/Sudoku.png" alt="Sudoku">
+                    <h3>Sudoku</h3>
+                    <p>A fully functional 9x9 Sudoku game in the terminal.</p>
+                </a>
+                <a href="./features/project-details/Network.html" class="card">
+                    <img src="./assets/Images/Networking3.jpeg" alt="Cisco Network">
+                    <h3>Cisco Network</h3>
+                    <p>Real network setup with DHCP, VLANs and SVIs.</p>
+                </a>
+            </div>
         </div>
-
-     </section>     
-
-
-
-     
+     </section>
 </body>
-</html>  
+</html>

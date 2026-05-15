@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/index-projects.css">
+    <link rel="stylesheet" href="../../styles/global-projects.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html" class="back-btn">← Back to Home</a></li>
+        </ul>
+    </nav>
+    <h1 class="project-title">Fishing Game</h1>
+    <div>
+        <img src="../../assets/Images/Fish.png" alt="Fish Game Screenshot" class="project-main-image">
+    </div>
+    <div class="project-content">
+        <p class="project-description">
+        A fishing game where you control a fishing rod trying 
+        to catch as many fish as possible before time runs out. Fish swim beneath you while 
+        you move your rod left and right to hook them.
+    </p>
+    <h2 class="Code-title">Part of code</h2>
+    <pre class="project-code"><code>static void HandleInput()
+    {
+        while (Console.KeyAvailable)
+        {
+           var key = Console.ReadKey(true).Key;
+           if (key == ConsoleKey.Escape) Environment.Exit(0);
+        
+           if ((key == ConsoleKey.Spacebar || key == ConsoleKey.DownArrow) && !rodExtending && !rodRetracting)
+           rodExtending = true;
+        
+           if (key == ConsoleKey.LeftArrow)
+            rodX--;
+           if (key == ConsoleKey.RightArrow)
+            rodX++;
+        }
+    }
+    </code></pre>
+    </div>
+    <div class="project-tech">
+        <p>List of tech used:</p>
+        <p>C#</p>
+        <p>.NET Console</p>
+        <p>Visual Studio</p>
+    </div>
+    <div>
+        <a href="https://github.com/CristianTev" class="github-link"> My GitHub link </a>
+    </div>
+</body>
+</html>

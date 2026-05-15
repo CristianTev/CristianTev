@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="../../styles/index-projects.css">
+    <link rel="stylesheet" href="../../styles/global-projects.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html" class="back-btn">← Back to Home</a></li>
+        </ul>
+    </nav>
+    <h1 class="project-title">Sudoku</h1>
+    <div>
+        <img src="../../assets/Images/Sudoku.png" alt="Fish Game Screenshot" class="project-main-image">
+    </div>
+    <div class="project-content">
+        <p class="project-description">
+        A fully playable Sudoku game with both 4x4 and 9x9 grid modes, 
+        where you fill in the missing numbers following classic Sudoku rules.
+    </p>
+    <h2 class="Code-title">Part of code</h2>
+    <pre class="project-code"><code>
+ for (int i = 0; i < size; i++)
+ {
+
+     Console.Write($"{(char)('A' + i)} | ");
+
+     for (int j = 0; j < size; j++)
+     {
+
+         string cellValue = board[i, j] == 0 ? "." : board[i, j].ToString();
+         Console.Write($" {cellValue} ");
+
+
+         if ((j + 1) % boxSize == 0 && j < size - 1)
+         {
+             Console.Write("|");
+         }
+     }
+     Console.WriteLine();
+
+     if ((i + 1) % boxSize == 0 && i < size - 1)
+     {
+         Console.WriteLine("   " + new string('-', (size * 4) + 1));
+     }
+ }
+    </code></pre>
+    </div>
+    <div class="project-tech">
+        <p>List of tech used:</p>
+        <p>C#</p>
+        <p>.NET Console</p>
+        <p>Visual Studio</p>
+    </div>
+    <div>
+        <a href="https://github.com/CristianTev" class="github-link"> My GitHub link </a>
+    </div>
+</body>
+</html>

@@ -1,5 +1,83 @@
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.left-section p{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 0.625rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.left-section h2{
+    font-size: 1.3rem;
+    color: #ff6f61;
+    margin: 1rem 0 0.5rem;
+}
+
+.right-section{
+    color: white;
+}
+
+.main-layout{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem 1.5rem 2rem;
+    gap: 2rem;
+}
+
+.project-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 0.625rem;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card h3{
+    color: #ff6f61;
+    margin-bottom: 0.5rem;
+}
+
+.card p{
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+.card img{
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
+}
 .back-video{
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     width: 100%;
@@ -9,19 +87,30 @@
 
 body{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     background-color: black;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
 nav{
-    position: fixed;
+    position: sticky;
     top: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
+    align-self: center;
     width: 90%;
-    max-width: 22rem;
+    max-width: 90%;
     height: auto; 
     padding: 0.5rem 0;
     background: rgba(0,0,0,0.4);
@@ -29,7 +118,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    z-index: 100;
 }
 
 nav a{
@@ -41,24 +130,6 @@ nav a{
     text-decoration: none;
     padding: 0.5rem 0.7rem ; 
     z-index: 1;
-}
-
-nav span{
-    display: none;
-}
-
-nav:hover span{
-    opacity: 1;
-}
-
-nav a:nth-child(1):hover ~ span{
-    left: 85px;
-}
-nav a:nth-child(2):hover ~ span{
-    left: 183px;
-}
-nav a:nth-child(3):hover ~ span{
-    left: 285px;
 }
 
 .profile{
@@ -73,6 +144,7 @@ padding: 6rem 1.5rem 2rem;
 
 .profile-text{
     max-width: 100%;
+    
 
 }
 
@@ -93,16 +165,6 @@ padding: 6rem 1.5rem 2rem;
     line-height: 1.6;
     margin-bottom: 2rem;
     color: white;
-}
-
-button{
-    background: #ff6f61;
-    color: white;
-    padding:0.7rem 1.5rem;
-    border: none;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    transition: transform 0.3s ease
 }
 
 .profile-picture{
@@ -127,14 +189,6 @@ section.profile{
     z-index: 1;
     width: 100%;
 }
-@keyframes glow{
-0%{
-        text-shadow: 0 0 5px #33fffc, 0 0 10px #33fffc, 0 0 20px #33fffc;
-    }
-    100%{
-        text-shadow: 0 0 10px #33fffc, 0 0 20px #33fffc , 0 0 30px #33fffc , 0 0 40px #33fffc;
-    }
-}
     
 @keyframes glow-border{
     0%{
@@ -158,34 +212,17 @@ section.profile{
 
 @media (min-width: 1024px) {
 
-    nav span{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 5.9rem;
-        height: 100%;
-        background: linear-gradient(45deg, #194b4f, #33fffc);
-        border-radius: 0.625rem;
-        transition: 0.5s;
-        opacity: 0;
-    }
- 
     nav{
-        max-width: none;
-        width:30rem;
-        height: 3.125rem;
-        padding:0;
+    max-width: 40%;
+    width: 40%;
+    height: 3.125rem;
+    padding:0;
     }
 
     nav a {
         padding: 0.5rem 1.4rem;
         font-size: 1rem;
     }
-
-    nav a:nth-child(1):hover ~ span { left: 5.3rem; }
-    nav a:nth-child(2):hover ~ span { left: 11.4rem; }
-    nav a:nth-child(3):hover ~ span { left: 17.8rem; }
 
     .profile{
         flex-direction: row;
@@ -203,9 +240,19 @@ section.profile{
     }
 
     .profile-picture{
-        width: 18.75rem;
-        height: 18.75rem;
-        margin: 0 3.125rem 0 0;
+        width: 50%;
+        height: 50%;
+    }
+
+    .main-layout{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .left-section{
+        width: 40%;
+    }
+    .right-section{
+        width: 60%;
     }
 }
 
