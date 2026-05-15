@@ -105,6 +105,8 @@ nav a {
     padding: 1rem;
     color: white;
     margin-top: 1rem;
+    width: 90%;
+    margin: 1rem auto 0;
 }
 
 .github-link {
@@ -113,12 +115,15 @@ nav a {
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 0.625rem;
     padding: 1rem;
-    color: white;
-    margin-top: 1rem;
     color: #60a5fa;
     margin-top: 1rem;
     text-decoration: none;
     font-weight: 600;
+}
+
+.github-container {
+    width: 90%;
+    margin: 1rem auto 2rem;
 }
 
 .github-link:hover {
